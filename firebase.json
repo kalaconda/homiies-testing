@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "homiies",
+    "public": "app",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

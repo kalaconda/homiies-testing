@@ -1,0 +1,25 @@
+{
+  "short_name": "Homiies",
+  "name": "Balance Household Responsibilities with Roommates",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon.ico.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "favicon.ico.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#242C6A",
+  "background_color": "#242C6A"
+}

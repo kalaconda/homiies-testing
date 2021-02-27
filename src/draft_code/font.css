@@ -1,0 +1,45 @@
+/* Airbnb App Font FONTBOOK */
+
+@font-face {
+    font-family:'AirbnbCerealBlack';
+    src: url('font/AirbnbCerealBlack.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family:'AirbnbCerealBold';
+    src: url('font/AirbnbCerealBold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family:'AirbnbCerealBook';
+    src: url('font/AirbnbCerealBook.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'AirbnbCerealExtraBold';
+    src: url('font/AirbnbCerealExtraBold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AirbnbCerealLight';
+    src: url('font/AirbnbCerealLight.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AirbnbCerealMedium';
+    src: url('font/AirbnbCerealMedium.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MODAL SIZING */
+.modal-wrapper {
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 1;
+    overflow-y: auto;
+    top: 0;
+}
+
+.modal-header {
+    padding: 1rem;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+}
+
+.modal-header span {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-content {
+    padding: 1.5rem 2rem;
+}
+
+.modal-body {
+    margin-bottom: 1rem;
+}
+
+.modal-body h4 {
+    font-size: 18px;
+    color: black;
+}
+
+.modal-body p {
+    font-size: 18px;
+}
+
+/* MODAL CONTENT ITEMS */
+
+/* input box */
+input.settaskinput {
+    outline: none;
+    color: #242C6A;
+    border: none;
+    background-color: #EDEFFA;
+    padding: 15px 10px;
+  }
+
+button.btn-cancel {
+    font-family: 'ubuntubold';
+    background-color: #F14F5E;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    padding: 15px 40px;
+    display: inline-flex;
+    font-size: 1rem;
+    margin: 1.5rem;
+}
+
+.btn-openModal {
+    font-family: 'ubunturegular';
+    font-size: 22px;
+    background-color: #F14F5E;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    margin: 1.5rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    position: fixed;
+    right:    0;
+    bottom:   1%;
+}
+
+img#plusbutton {
+    width: 20px;
+    height: 20px;
+}
+
+img#effortlevel {
+    width: 20px;
+    height: 20px;
+}
+
+.task-options {
+    margin: 1.5rem 0;
+}
+
+/* Completed by: */
+.deadline-form {
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+form.deadline-form input {
+    background-color: #EDEFFA;
+    font-family: 'ubunturegular';
+    border: none;
+    padding: 5px 5px;
+}
+
+.datecontainer {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+}
+
+/* Effort Level */
+.effortcontainer {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+}
+
+.effort {
+    flex-direction: row;
+    margin: 1.5rem 0;
+    text-align: left;
+    padding: 0;
+}
+
+select.effort-dropdown {
+    background-color: #EDEFFA;
+    font-family: 'ubunturegular';
+    border: none;
+    padding: 5px 5px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+li {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+h3.modalheading {
+    text-align: left !important;
+}
+
+h3.modalheading2 {
+    text-align: left !important;
+    font-family: 'ubunturegular';
+}
+
+hr {
+    border-bottom: 1px solid #D0D0D0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px;
+}
+
+/* Toggle Button */
+
+.repeatcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+.toggle-wrapper label{
+    background-color: #C7D7CC;
+    display: inline-block;
+    position: relative;
+
+    width: 56px;
+    height: 24px;
+    border-radius: 22px;
+    cursor: pointer;
+
+    font-size: 0;
+    align-self: center;
+}
+
+.toggle-wrapper label:after{
+    content: "";
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    right: 34px; 
+    border-radius: 50%;
+    background-color: #DFEFE4;
+    transition: all ease-in-out 0.5s;
+
+}
+.toggle-wrapper input:checked + label{
+    background-color: #FFE4B6;
+}
+.toggle-wrapper input:checked + label:after{
+    background-color: #F6A417;
+    right: 3px;
+}
+.toggle-wrapper input{
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    bottom: 0;
+}
