@@ -8,8 +8,6 @@ import Tasks from "./pages/Tasks";
 import TodoItem from "./pages/TodoItem";
 import Insights from "./pages/Insights";
 import "./App.css";
-/*import { db } from "./components/firebase";
-import firebase from "firebase";*/
 import { db, auth } from './components/fire';
 
 
@@ -47,15 +45,6 @@ function App() {
     completed: "completed"
   };
 
-  db.collection("users").doc(user.uid).collection("todos").add(data) 
-    .then((docRef) => {
-      this.myListOfItems.push(data);
-      this.$store.items.add(data)
-      console.log("Document written with ID: ", docRef.id);
-  })
-    .catch((error) => {
-        console.error("Error adding document: ", error);
-  });
 
   /*** MODAL COMPONENT ***/
 
@@ -84,8 +73,7 @@ function App() {
 
   const handleLogin = () => {
     clearErrors();
-      auth()
-      .signInWithEmailAndPassword(email, password)
+      auth.signInWithEmailAndPassword(email, password)
       .catch((err) => {
         switch (err.code) {
           case "auth/invalid-email":
@@ -103,8 +91,7 @@ function App() {
 
   const handleSignup = () => {
     clearErrors();
-      auth()
-      .createUserWithEmailAndPassword(email, password)
+      auth.createUserWithEmailAndPassword(email, password)
       .catch((err) => {
         switch (err.code) {
           case "auth/email-already-in-use":
@@ -120,7 +107,7 @@ function App() {
   };
 
   function handleLogOut() {
-    auth().signOut();
+    auth.signOut();
   }
 
   const authListener = () => {
@@ -137,6 +124,17 @@ function App() {
   useEffect(() => {
     authListener();
   }, []);
+
+  useEffect( () => { 
+   db.collection("users").doc(user.uid).collection("todos").add(data).then((docRef) => {
+      this.myListOfItems.push(data);
+      this.$store.items.add(data)
+      console.log("Document written with ID: ", docRef.id);
+    })
+  .catch((error) => {
+      console.error("Error adding document: ", error);
+    });
+  }, [])
 
   /*** REACT ROUTER / NAVIGATION  ***/
   return (

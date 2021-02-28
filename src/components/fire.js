@@ -1,7 +1,6 @@
-// Firebase App (the core Firebase SDK) is always required and must be listed first
-//import "firebase/auth";
 import firebase from 'firebase';
 
+// Initialize Firebase
 const firebaseApp = firebase.initializeApp({
     apiKey: "AIzaSyAZSgyscyzrJ9pm5Yd6u9iT0-sw5pQe69I",
     authDomain: "homiies-8ae9a.firebaseapp.com",
@@ -13,17 +12,9 @@ const firebaseApp = firebase.initializeApp({
     measurementId: "G-K8709D7CPC"
   })
 
-   // Initialize Firebase
-
+  // initialize firestore & auth
    const db = firebaseApp.firestore();
    const auth = firebaseApp.auth();
-   /*
-   class firebase {
-    constructor() {
-      app.initializeApp(config);
-      this.auth = app.auth();
-    }
-  }*/
 
   export {db, auth};
 
