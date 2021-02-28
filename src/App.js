@@ -106,10 +106,6 @@ function App() {
       });
   };
 
-  function handleLogOut() {
-    auth.signOut();
-  }
-
   const authListener = () => {
     auth.onAuthStateChanged((user) => {
       clearInputs();
@@ -120,6 +116,14 @@ function App() {
       }
     });
   };
+
+  const handleLogOut = () => {
+    auth.signOut().then(() => {
+      console.log("signout successful")
+    }).catch(err => {
+      console.log(err, "auth error")
+    });
+  }
 
   useEffect(() => {
     authListener();
@@ -136,6 +140,8 @@ function App() {
     });
   }, [])
 
+  console.log(user)
+
   /*** REACT ROUTER / NAVIGATION  ***/
   return (
     <div className="App">
@@ -143,10 +149,10 @@ function App() {
         {user ? (
           <>
             <Route exact path="/">
-              <Home handleLogOut={handleLogOut} />
+              <Home handleLogOut={handleLogOut} auth={auth} />
             </Route>
             <Route exact path="/home">
-              <Home handleLogOut={handleLogOut} />
+              <Home handleLogOut={handleLogOut} auth={auth} />
             </Route>
             <Route exact path="/tasks">
               <Tasks closeModalHandler={closeModalHandler} setShow={setShow} show={show} handleSubmit={handleSubmit} todos={todos} inputValue={inputValue} setInputValue={setInputValue} removeTodo={removeTodo}/>

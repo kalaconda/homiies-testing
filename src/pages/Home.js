@@ -6,7 +6,9 @@ const Home = ({ handleLogOut}) => {
     <div className="App">
       <NB />
       <div className="white">
-      <button className="pinkbtn" onClick={handleLogOut}>
+        {/* BUTTON NOT WORKING MAKE A DIV INSTEAD A BUTTON ELEMENT -Vujke */}
+        <a onClick={() => handleLogOut()}>hello</a>
+      <button className="pinkbtn" onClick={() => handleLogOut()}>
           Logout
         </button>
     </div>
