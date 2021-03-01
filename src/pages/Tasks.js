@@ -15,7 +15,7 @@ const Tasks = ({show, setShow, closeModalHandler, inputValue, setInputValue, han
       <div className="white">
 
           <div className="taskwelcome">
-            <h2 class="taskwelcometxt"> Hello! </h2>
+            <h2 className="taskwelcometxt"> Hello! </h2>
           </div>
           <ul className="tasknav">
             <Link to ="/recent" className="task-link">
@@ -28,15 +28,6 @@ const Tasks = ({show, setShow, closeModalHandler, inputValue, setInputValue, han
               <h3> Insights </h3>
             </Link>
           </ul>
-
-          <div className="toggle-taskopt">
-            <p id="mytask">My Task </p>
-            <div class="toggle-wrapper2">
-              <input id="toggle-3" type="checkbox"/>
-              <label for="toggle-3">Select</label>
-            </div>
-            <p id="all">All </p>
-          </div>
 
           <button onClick={() => setShow(true)} className="btn-openModal">+ Task</button>
           {/* pop up modal for add task */}

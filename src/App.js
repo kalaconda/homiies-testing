@@ -1,15 +1,12 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Modal from "./components/Modal";
 import { v4 as uuidv4 } from 'uuid';
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Tasks from "./pages/Tasks";
-import TodoItem from "./pages/TodoItem";
 import Insights from "./pages/Insights";
 import "./App.css";
 import { db, auth } from './components/fire';
-
 
 function App() {
 
@@ -149,10 +146,10 @@ function App() {
         {user ? (
           <>
             <Route exact path="/">
-              <Home handleLogOut={handleLogOut} auth={auth} />
+              <Home handleLogOut={handleLogOut} />
             </Route>
             <Route exact path="/home">
-              <Home handleLogOut={handleLogOut} auth={auth} />
+              <Home handleLogOut={handleLogOut} />
             </Route>
             <Route exact path="/tasks">
               <Tasks closeModalHandler={closeModalHandler} setShow={setShow} show={show} handleSubmit={handleSubmit} todos={todos} inputValue={inputValue} setInputValue={setInputValue} removeTodo={removeTodo}/>

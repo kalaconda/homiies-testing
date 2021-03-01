@@ -118,53 +118,6 @@ ul.tasknav {
   font-size: 18px;
 }
 
-.toggle-wrapper2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.toggle-wrapper2 label{
-  background-color: #242C6A;
-  display: inline-block;
-  position: relative;
-  width: 50px;
-  height: 24px;
-  border-radius: 22px;
-  cursor: pointer;
-  font-size: 0;
-  align-self: center;
-}
-
-.toggle-wrapper2 label:after{
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 2px;
-  right: 29px; 
-  border-radius: 50%;
-  background-color: #ffffff;
-  transition: all ease-in-out 0.5s;
-
-}
-.toggle-wrapper2 input:checked + label{
-  background-color: #242C6A;
-}
-.toggle-wrapper2 input:checked + label:after{
-  background-color: #ffffff;
-  right: 3px;
-}
-.toggle-wrapper2 input{
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  bottom: 0;
-}
-
 /* links */
 a { 
   text-decoration: none; 
@@ -259,7 +212,7 @@ input[type=password] {
 }
 
 /* Buttons */
-button.pinkbtn {
+.pinkbtn {
   background-color: #F14F5E;
   border: none;
   color: white;
@@ -406,29 +359,6 @@ button.pinkbtn {
   position: absolute;
   overflow:hidden;
 }
-
-/*
-.graph:before, .graph:after {
-  width: 300px;
-  height: 150px;
-  position: absolute;
-  top: 100%;
-  border: 30px solid #000;
-  content: '';
-  border-radius:0 0 300px 300px;
-  border-top: none;
-  animation: demo 3s;
-  transform-origin: center top;
-}
-
-.graph:after {
-  transform: rotate(150deg);
-}
-
-@keyframes demo {
-  0% { transform: rotate(0deg) }
-  60% { transform: rotate(180deg) }
-} */
 
 /* Effort Distribution */
 .cardoutline2 {
