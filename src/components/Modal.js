@@ -3,7 +3,7 @@ import { BiArrowBack } from 'react-icons/bi';
 import plus_button from '../images/plus_button.png';
 import "../Modal.css";
 
-const Modal = ({ show, closeModalHandler, inputValue, setInputValue, handleSubmit }) => {
+const Modal = ({ show, closeModalHandler, inputValue, setInputValue, handleSubmit, HideableText}) => {
     return (
         <div className="modal-wrapper"
         >
@@ -12,6 +12,7 @@ const Modal = ({ show, closeModalHandler, inputValue, setInputValue, handleSubmi
             </div>
             <div className="modal-content">
                 <div className="modal-body">
+                <HideableText/>
                 {/* get input value and add todo */}
                 <form onSubmit={handleSubmit}>
                     <input 

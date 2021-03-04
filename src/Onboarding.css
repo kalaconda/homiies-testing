@@ -1,0 +1,196 @@
+title{
+    display: none;
+}
+
+#onboardingtxt {
+    font-family: 'medium';
+}
+
+.onboarding {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.onboarding h1 {
+    font-size: 25px;
+}
+
+div#onboardtxt2 {
+    font-family: 'medium';
+    text-align: left;
+}
+
+
+.codeopt {
+    margin-top: 2.5rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-family: 'medium';
+}
+
+/** Recent Page **/
+
+    /** top of page **/
+    .homescreen-top{
+        margin: 1.5rem;
+    }
+    .homescreen-top header{
+        font-family: bold;
+        font-size: 2rem;
+        color: #242C6A;
+    }
+    .homescreen-top p{
+        font-family: medium;
+        font-size: 1rem;
+        color: #242C6A;
+        padding-top: 1rem;
+        border-bottom: 2px solid lightgrey;
+    }
+
+.recent-tile{
+    background-color: #F1F3FF;
+    margin: 1rem;
+    padding: .75rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.recent-tile header{
+    font-family: 'light';
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+.recent-name{
+    font-family: medium;
+}
+.recent-reaction{
+    max-width: 20px;
+}
+.reactions button{
+    background-color: transparent;
+    border: none;
+    padding: .25rem;
+}
+.reactions{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*  splashscreen  */
+.splash-screen{
+    background-color: #242C6A;
+    height: 100vh;
+    text-align: center;
+}
+.splash-screen-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+.splash-screen-center h1{
+    font-family: bold;
+    color: white;
+    font-size: 1.25;
+}
+.splash-screen-center p{
+    font-family: medium;
+    font-size: 1rem;
+    color: white;
+}
+.splash-screen-logo{
+    height: 80px;
+    margin: 0;
+}
+
+/*  onboarding screens */
+
+.o-screen-1 label, .o-screen-2 label, .o-screen-3 label{
+    font: 1rem 'light';
+    text-align: left;
+}
+
+
+input#code{
+    margin: .7rem 0 2rem;
+    width: 100%;
+    border: 2px solid #868FC3;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.o-screen-button-style-1{
+    background-color: #F14F5E;
+    border: none;
+    border-radius: 20px;
+    font-family: medium;
+    font-size: 1.15rem;
+    padding: .5rem 1.25rem;
+    color: white;
+    cursor: pointer;
+    margin: 2rem auto 1.25rem;
+    outline: none;
+    width: 90%;
+}
+
+.sharecode {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.o-screen-button-style-2{
+    background-color: transparent;
+    border: none;
+    font-family: 'light';
+    font-weight: bold;
+    font-size: 1rem;
+    color: #242C6A;
+    cursor: pointer;
+    outline: none;
+}
+
+span#share {
+    color: #242C6A;
+    font-size: 18px;
+    margin-left: 0;
+}
+
+.o-screen-button-style-3{
+    background-color: rgba(0, 0, 0, 0.062);
+    border: none;
+    font-family: 'light';
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-top: 0rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.o-screen-button-style-4{
+    background-color: #F14F5E;
+    border: none;
+    border-radius: 20px;
+    font-family: medium;
+    font-size: 1.15rem;
+    padding: .5rem 1.25rem;
+    color: white;
+    cursor: pointer;
+    margin: 5rem auto 0;
+    outline: none;
+    width: 50%;
+}
+
+/* claim task functionality **/
+
+.task{
+    background-color:  #DFEFE4;
+}

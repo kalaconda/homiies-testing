@@ -21,6 +21,9 @@ const Login = (props) => {
       <NB />
           <div className="loginContainer">
 
+          <h1 id="onboardingtxt">Create A Profile</h1>
+          <div id="profilepic"></div>
+
             <div className="inputs">
               <label htmlFor="name">Your Email</label>
               <input
@@ -62,7 +65,7 @@ const Login = (props) => {
                 <>
                   <button className="pinkbtn" onClick={handleSignup}>Continue</button>
               
-                  <p>
+                  <p id="loginopt">
                     Have an account?
                     <span onClick={() => setHasAccount(!hasAccount)}> Sign in</span>
                   </p>

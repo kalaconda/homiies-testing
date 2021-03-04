@@ -35,13 +35,49 @@
   overflow-y: hidden;
   height: 100%;
   padding-bottom: 90px;
+  margin-top: 1.5rem;
 }
 
 /* TODO LIST */
-.togglefilter {
+.taskstoggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 70px;
   width: 100%;
-  padding: 40px 30px;
-  border-bottom: 1px solid #bbbbbb;
+}
+
+.foryoucontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+  width: 50%;
+  background-color: #242C6A;
+  border-radius: 5px;
+}
+
+.foryou {
+  color: white;
+  font-family: 'ubunturegular';
+  margin-left: 27px;
+}
+
+.everyone {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  width: 43%;
+  background-color: white;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+p#taskstog-1 {
+  color: #242C6A;
+  font-family: 'ubunturegular';
 }
 
 span.check {
@@ -51,28 +87,26 @@ span.check {
   cursor: pointer;
 }
 
+span.moreopt {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin-left: 90%;
+  color: #FFA100;
+  font-size: 30px;
+}
+
 div.todoItem {
   font-family: 'ubunturegular';
   background-color: #EDEFFA;
   border-radius: 10px;
-  width: 90%;
+  width: 80%;
   height: 87px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-}
-
-/* the purple line decoration on the tasks */
-div.decorline {
-  background-color: #242C6A;
-  border-radius: 10px 0 0 10px;
-  height: 87px;
-  width: 15px;
-  position: absolute;
-  left: 17px;
-  /*z-index: -1;*/
 }
 
 /* task navigation */
@@ -193,14 +227,28 @@ h3 {
   font-size: 18px;
 }
 
+.btnContainer {
+  margin-top: 2rem;
+}
+
+p#loginopt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  line-height: 30px;
+}
+
+p#loginopt span {
+  margin: 0;
+}
 
 input.logininput {
-  background-color: none;
+  background-color: white;
   outline: none;
-  border-top: none;
-  border-bottom: 3px solid #F6A417;
-  border-left: none;
-  border-right: none;
+  border: 2px solid #868FC3;
+  padding: 10px;
 }
 
 input[type=text] {
@@ -220,7 +268,6 @@ input[type=password] {
   border-radius: 50px;
   font-size: 18px;
   font-family: 'ubuntubold';
-  margin: 1.5rem;
   bottom: 0;
   outline: none;
   padding: 15px 40px;
@@ -436,3 +483,22 @@ input[type=password] {
 
 }
 
+@font-face{
+  font-family: 'light';
+  src: url(fonts/AirbnbCerealLight.woff) format('woff');
+}
+
+@font-face{
+  font-family: 'book';
+  src: url(fonts/AirbnbCerealBook.woff) format('woff');
+}
+
+@font-face{
+  font-family: 'medium';
+  src: url(fonts/AirbnbCerealMedium.woff) format('woff');
+}
+
+@font-face{
+  font-family: 'bold';
+  src: url(fonts/AirbnbCerealBold.woff) format('woff');
+}

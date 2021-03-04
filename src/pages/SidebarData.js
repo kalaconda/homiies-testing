@@ -5,7 +5,7 @@ import * as HiIcons from "react-icons/hi";
 export const SidebarData = [
     {
         title: "Home",
-        path: "/home",
+        path: "/onboarding1",
         icon: <HiIcons.HiHome />,
         cName: "nav-text"
     },
