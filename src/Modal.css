@@ -52,7 +52,8 @@ input.settaskinput {
     color: #242C6A;
     border: none;
     background-color: #EDEFFA;
-    padding: 15px 10px;
+    padding: 15px 15px;
+    width: 95%;
   }
 
 button.btn-cancel {

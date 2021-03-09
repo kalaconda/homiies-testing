@@ -1,5 +1,6 @@
 import React from "react";
 import NB from "./NavBar"; 
+import ProPic from '../images/add_propic.svg';
 
 const Login = (props) => {
 
@@ -22,7 +23,9 @@ const Login = (props) => {
           <div className="loginContainer">
 
           <h1 id="onboardingtxt">Create A Profile</h1>
-          <div id="profilepic"></div>
+          <div id="profilepic">
+            <img src={ProPic} alt="logo" />
+          </div>
 
             <div className="inputs">
               <label htmlFor="name">Your Email</label>
@@ -56,7 +59,7 @@ const Login = (props) => {
                 <>
                   <button className="pinkbtn" onClick={handleLogin}>Sign In</button>
 
-                  <p>
+                  <p id="loginopt">
                     Don't have a account?
                     <span onClick={() => setHasAccount(!hasAccount)}> Sign Up</span>
                   </p>

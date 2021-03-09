@@ -9,7 +9,6 @@ import "./App.css";
 import { db, auth } from './components/fire';
 import Onboarding1 from "./pages/Onboarding1";
 import Onboarding2 from "./pages/Onboarding2";
-import HideableText from "./pages/HideableText";
 
 function App() {
 
@@ -38,15 +37,37 @@ function App() {
     setTodos(todos.filter((todoItem) => todoItem.todoId !== id)); 
   }
 
+  /*** AUTOCOMPLETE FEATURE ***/
+  const todoMockData = ["Take out trash", "Clean the floors", "Wash dishes", "Empty Dishwasher"];
+  const [search, setSearch] = useState("");
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const openDropdown = () => {
+    setIsDropdownOpen((prevOpen) => !prevOpen);
+  };
+
+  const addTodo = (todoItem) => {
+    if (search.trim() === "") return;
+    setTodos([
+      ...todos,
+      {
+        title: todoItem
+      }
+    ]);
+  };
+
+  useEffect(() => {
+    if (search !== "") {
+      openDropdown();
+    }
+  }, [search]);
+
   /*** SAVING DATA ***/
 
   const data = {
     task: "todoText",
     completed: "completed"
   };
-
-  /*** AUTOCOMPLETE FEATURE ***/
-
 
   /*** MODAL COMPONENT ***/
 
@@ -160,10 +181,7 @@ function App() {
               <Onboarding2 />
             </Route>
             <Route exact path="/tasks">
-              <Tasks closeModalHandler={closeModalHandler} setShow={setShow} show={show} handleSubmit={handleSubmit} todos={todos} inputValue={inputValue} setInputValue={setInputValue} removeTodo={removeTodo}/>
-            </Route>
-            <Route exact path="/modal">
-              <HideableText text="Dynamic text!"/>
+              <Tasks closeModalHandler={closeModalHandler} setShow={setShow} show={show} handleSubmit={handleSubmit} todos={todos} inputValue={inputValue} setInputValue={setInputValue} removeTodo={removeTodo} search={search} setSearch={setSearch} openDropdown={openDropdown} isDropdownOpen={isDropdownOpen} todoMockData={todoMockData}/>
             </Route>
             <Route exact path="/insights">
               <Insights closeModalHandler={closeModalHandler} setShow={setShow} show={show} inputValue={inputValue} setInputValue={setInputValue} />

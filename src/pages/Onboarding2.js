@@ -1,8 +1,8 @@
 import React from 'react';
 import NB from "./NavBar"; 
 import "../Onboarding.css";
-import { Link } from "react-router-dom";
 import { HiOutlineUpload } from 'react-icons/hi';
+import { FiCopy } from 'react-icons/fi';
 
 //const Onboarding1 = ({ handleLogOut}) => {
 const Onboarding2 = () => {
@@ -18,7 +18,9 @@ const Onboarding2 = () => {
                 <input type="text" id="create-group" name="create-group"/>
                 <div className="codeopt"><label for="code">Group Code</label></div>
 
-                <button className="o-screen-button-style-3">XYFJB</button>
+                <button className="o-screen-button-style-3">XYFJB
+                <span id="copy"><FiCopy/></span>
+                </button>
                 <button className="o-screen-button-style-4">Save</button>
 
                 <div className="sharecode">

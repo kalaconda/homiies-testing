@@ -1,10 +1,9 @@
 import React from 'react';
 import NB from "./NavBar"; 
 import "../Onboarding.css";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Onboarding1 = ({ handleLogOut}) => {
-//const Onboarding1 = () => {
   return (
     <div className="App">
       <NB />
@@ -21,11 +20,11 @@ const Onboarding1 = ({ handleLogOut}) => {
 
                 <div id="onboardtxt2">code</div>
                 <input type="text" id="code" name="code"></input>
-                <button className="o-screen-button-style-1">Join Group</button>
+                <Link to="/tasks"><button className="o-screen-button-style-1">Join Group</button></Link>
                 <Link to="/onboarding2"><button className="o-screen-button-style-2">Create a group</button></Link>
           </div>
         <a onClick={() => handleLogOut()}>
-          <div className="pinkbtn">Logout</div>
+          <div className="logoutbtn">Logout</div>
           </a>
     </div>
     </div>

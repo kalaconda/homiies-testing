@@ -1,12 +1,12 @@
 import React from 'react'
 import * as FaIcons from "react-icons/fa";
-import * as HiIcons from "react-icons/hi";
+import * as BsIcons from "react-icons/bs";
 
 export const SidebarData = [
     {
-        title: "Home",
+        title: "Getting Started",
         path: "/onboarding1",
-        icon: <HiIcons.HiHome />,
+        icon: <BsIcons.BsFillPersonFill />,
         cName: "nav-text"
     },
     {

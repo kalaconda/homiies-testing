@@ -39,12 +39,59 @@
 }
 
 /* TODO LIST */
+.claimsection {
+  background-color: #F1F3FF;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.requestitem {
+  display: flex;
+  font-family: 'ubunturegular';
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.3);
+  width: 85%;
+  height: 87px;
+  padding-left: 20px;
+}
+
+.request-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 50%;
+}
+
+.request-content2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.request-content p {
+  font-family: 'ubuntubold';
+}
+
+p#request-date {
+  font-family: 'ubunturegular';
+  color: rgba(0, 0, 0, 0.527);
+}
+
 .taskstoggle {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  height: 70px;
+  height: 30px;
   width: 100%;
 }
 
@@ -79,13 +126,14 @@ p#taskstog-1 {
   color: #242C6A;
   font-family: 'ubunturegular';
 }
-
-span.check {
+/*
+input.check {
   color: #242C6A;
   font-weight: bold;
   padding: 10px;
   cursor: pointer;
 }
+*/
 
 span.moreopt {
   position: absolute;
@@ -96,6 +144,7 @@ span.moreopt {
   font-size: 30px;
 }
 
+/*
 div.todoItem {
   font-family: 'ubunturegular';
   background-color: #EDEFFA;
@@ -108,6 +157,7 @@ div.todoItem {
   align-items: center;
   margin-top: 20px;
 }
+*/
 
 /* task navigation */
 ul.tasknav {
@@ -187,11 +237,12 @@ h2 {
 .taskwelcome {
   text-align: left;
   width: 100%;
-  padding: 20px 30px;
+  padding: 0 35px 50px;
+  line-height: 40px;
 }
 
 h2.taskwelcometxt {
-  font-size: 35px;
+  font-size: 30px;
   color: #242C6A;
 }
 
@@ -272,6 +323,38 @@ input[type=password] {
   outline: none;
   padding: 15px 40px;
   z-index: -1;
+}
+
+.logoutbtn {
+  background-color: #F14F5E;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 18px;
+  font-family: 'ubuntubold';
+  margin-top: 45%;
+  outline: none;
+  padding: 15px 40px;
+  z-index: -1;
+}
+
+.claimbtn {
+  border: none;
+  background-color: #F14F5E;
+  color: white;
+  cursor: pointer;
+  padding: 7px 25px;
+  outline: none;
+  letter-spacing: 1px;
+  font-family: 'ubunturegular';
+  font-size: 16px;
+}
+
+span#closebtn {
+  color: #242C6A;
+  font-size: 23px;
+  font-weight: bold;
 }
 
 /* INSIGHTS */
@@ -395,8 +478,8 @@ input[type=password] {
   width: 200px;
   height: 120px;
   position: absolute;
-  border: 30px solid rgba(0,0,0,0.1);
-  border-radius: 300px 300px 0 0;
+  border: 30px solid #DFEFE4;
+  border-radius: 300px 300px 30px 30px;
   border-bottom: none;
 }
 
@@ -463,6 +546,74 @@ input[type=password] {
   background: conic-gradient(#F14F5E 0% 25%, #F7D720 25% 50%, #DFEFE4 50% 75%, #242C6A 75% 100%);
   border-radius: 50%;
 }
+
+/* emoji react micro interaction */
+a.emojicontainer {
+  color:#BFBFBA;
+  background: none;
+  text-decoration:none;
+  font-family:fontawesome;
+  font-style: normal;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:auto;
+  height:100%;
+  margin:0 2px;
+  -o-transition:all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+  -webkit-font-smoothing: antialiased;
+}
+
+a.emojicontainer span {
+  display: flex;
+  flex-direction: row;
+  color:#BFBFBA;
+  position:absolute;
+  font-family: 'Archivo', sans-serif;
+  letter-spacing: 1.5px;
+  margin-left: 0;
+  bottom:0;
+  padding:10px 7px;
+  z-index:1;
+  font-size:20px;
+  border-radius:5px;
+  background:#fff;
+  visibility:hidden;
+  opacity:0;
+  -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* pop-up text arrow */
+
+a.emojicontainer span:before {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  position:absolute;
+  bottom:-5px;
+  margin-left: 0;
+}
+
+/* text pops up when icon is in hover state */
+
+a.emojicontainer:focus span {
+  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
+  bottom: -110px;
+  visibility:visible;
+  opacity:1;
+  margin-left: 0;
+}
+
+
 
 /* fonts */
 @font-face {

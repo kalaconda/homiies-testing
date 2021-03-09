@@ -2,6 +2,16 @@ title{
     display: none;
 }
 
+div#profilepic {
+padding-top: 40px;
+padding-bottom: 20px;
+}
+
+input#create-group {
+    border: 2px solid #868FC3;
+    height: 40px;
+}
+
 #onboardingtxt {
     font-family: 'medium';
 }
@@ -64,23 +74,34 @@ label {
     font-family: 'light';
     font-size: 1rem;
     margin-bottom: .5rem;
+    text-align: left;
 }
 .recent-name{
     font-family: medium;
 }
 .recent-reaction{
-    max-width: 20px;
+    width: 30px;
+    padding: 5px;
 }
 .reactions button{
     background-color: transparent;
     border: none;
-    padding: .25rem;
 }
 .reactions{
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    height: 70px;
 }
 
+div.content {
+    margin-right: 20px;
+}
+
+p.time {
+    text-align: left;
+    color: rgba(0, 0, 0, 0.671);
+}
 
 /*  splashscreen  */
 .splash-screen{
@@ -164,7 +185,16 @@ span#share {
     margin-left: 0;
 }
 
+span#copy {
+    font-size: 18px;
+    padding-left: 40px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
 .o-screen-button-style-3{
+    display: flex;
+    justify-content: flex-end;
     background-color: rgba(0, 0, 0, 0.062);
     border: none;
     font-family: 'light';

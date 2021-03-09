@@ -15,7 +15,9 @@ const Recent = ({show, setShow, closeModalHandler, inputValue, setInputValue }) 
         <NB />
       <div className="white">
           <div className="taskwelcome">
-            <h2 class="taskwelcometxt"> Hello! </h2>
+              <h2 className="taskwelcometxt"> Good morning, 
+              <br></br>
+              Jennifer </h2>
           </div>
           <ul className="tasknav">
             <Link to ="/recent" className="task-link">
@@ -31,11 +33,16 @@ const Recent = ({show, setShow, closeModalHandler, inputValue, setInputValue }) 
 
       <div className="recent-tile">
         <div className="content">
-            <header><b class="recent-name">Mikayla</b> completed 'Take out the Trash'</header>
-            <p class="time">47min ago</p>
+            <header><b class="recent-name">Jennifer</b> completed 'Take out the Trash'</header>
+            <p className="time">47min ago</p>
       </div>
       <div className="reactions">
-                <button><img className="recent-reaction" src={emoji} alt="add emoji reaction"/></button>
+      <div className="reactcontainer">
+        <a href="#" className="emojicontainer">
+            <img className="recent-reaction" src={emoji} alt="add emoji reaction"/>
+            <span>🤩❤️👏</span>
+        </a>
+      </div>
                 <button><img className="recent-reaction" src={comment} alt="add comment"/></button>
         </div> 
       </div>

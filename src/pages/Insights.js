@@ -1,6 +1,5 @@
 import React from 'react';
 import NB from "./NavBar"; 
-import TodoItem from "./TodoItem";
 import Modal from "../components/Modal";
 import { Link } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
@@ -17,7 +16,9 @@ const Insights = ({show, setShow, closeModalHandler, inputValue, setInputValue }
         <NB />
       <div className="white">
           <div className="taskwelcome">
-            <h2 class="taskwelcometxt"> Hello! </h2>
+              <h2 className="taskwelcometxt"> Good morning, 
+              <br></br>
+              Jennifer </h2>
           </div>
           <ul className="tasknav">
             <Link to ="/recent" className="task-link">

@@ -8,12 +8,11 @@ const welcome = () => {
         <header className="purple">
         <h2> Homiies. </h2>
           <img src={logo} className="App-logo" alt="logo" />
-            <Link to="/login">
             <div className="App-link">
             <p>Live together.</p> 
             <p>Be responsible together.</p>
             </div>
-            </Link>
+            <Link to="/onboarding1"><button className="o-screen-button-style-2">Continue</button></Link>
         </header>
       </div>
     );

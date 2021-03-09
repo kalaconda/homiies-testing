@@ -3,19 +3,22 @@ import NB from "./NavBar";
 import TodoItem from "./TodoItem";
 import Modal from "../components/Modal";
 import { Link } from 'react-router-dom';
+import { GrFormClose } from 'react-icons/gr';
 
 /*
   add, display, complete, filter, and delete todos
 */
 
-const Tasks = ({show, setShow, closeModalHandler, inputValue, setInputValue, handleSubmit, todos, errorMsg, removeTodo }) => {
+const Tasks = ({show, setShow, closeModalHandler, inputValue, setInputValue, handleSubmit, todos, removeTodo }) => {
     return (
       <div className="App">
         <NB />
       <div className="white">
 
           <div className="taskwelcome">
-            <h2 className="taskwelcometxt"> Hello! </h2>
+            <h2 className="taskwelcometxt"> Good morning, 
+            <br></br>
+            Jennifer </h2>
           </div>
           <ul className="tasknav">
             <Link to ="/recent" className="task-link">
@@ -29,6 +32,18 @@ const Tasks = ({show, setShow, closeModalHandler, inputValue, setInputValue, han
             </Link>
           </ul>
 
+          <div className="claimsection">
+            <div className="requestitem">
+              <div className="request-content">
+                <p>Clean Stove</p>
+                <p id="request-date">03/20/2021</p>
+              </div>
+              <div className="request-content2">
+                <button className="claimbtn">Claim</button>
+                <span id="closebtn">< GrFormClose/></span>
+              </div>
+            </div>
+          </div>
           <div className="taskstoggle">
             <div className="foryoucontainer">
               <div className="foryou">

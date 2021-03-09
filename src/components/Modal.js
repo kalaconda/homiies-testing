@@ -3,25 +3,55 @@ import { BiArrowBack } from 'react-icons/bi';
 import plus_button from '../images/plus_button.png';
 import "../Modal.css";
 
-const Modal = ({ show, closeModalHandler, inputValue, setInputValue, handleSubmit, HideableText}) => {
+const Modal = ({ show, closeModalHandler, inputValue, setInputValue, handleSubmit, search, setSearch, addTodo, openDropdown, isDropdownOpen, todoMockData , todos}) => {
     return (
-        <div className="modal-wrapper"
-        >
+        <div className="modal-wrapper">
             <div className="modal-header">
                 <span onClick={closeModalHandler} className="close-modal-btn"><BiArrowBack/></span>
             </div>
             <div className="modal-content">
                 <div className="modal-body">
-                <HideableText/>
                 {/* get input value and add todo */}
-                <form onSubmit={handleSubmit}>
+                <form 
+                    onSubmit={(e) => {
+                    e.preventDefault();
+                    addTodo(search);
+                }}
+                    className="dropdownHeading"
+                >
                     <input 
-                    className="settaskinput"
-                    value= {inputValue} 
-                    onChange= {e => setInputValue(e.target.value)} 
-                    type="text" 
-                    placeholder="Enter task..." 
+                        //className="settaskinput"
+                        value= {search} 
+                        type="text" 
+                        //placeholder="Enter task..." 
+                        onChange= {e => setSearch(e.target.value)} 
                     />
+                    <span onClick={openDropdown}>||</span>
+                </form>
+
+                {isDropdownOpen && (
+                <div className="dropdownOptions">
+                    {todoMockData
+                    .filter((item) =>
+                        item.toLowerCase().includes(search.toLowerCase())
+                    )
+                    .map((item, index) => (
+                        <p onClick={() => addTodo(item)} key={index}>
+                        {item}
+                        </p>
+                    ))}
+                </div>
+                )}
+                </div>
+                
+                <div className="todoContainer">
+                {todos?.map((todo, index) => (
+                <div key={index} className="todoItem">
+                    <p>{todo.title}</p>
+                </div>
+                ))}
+                </div>
+                
             
                     <div className="task-options">
                         <ul>
@@ -97,12 +127,9 @@ const Modal = ({ show, closeModalHandler, inputValue, setInputValue, handleSubmi
                     {/* Set Task */}
                     <button type="submit" className="btn-cancel">Set Task</button>
                     
-                    </form>
-                    
 
                 </div>
             </div>
-        </div>
     )
 }
 
